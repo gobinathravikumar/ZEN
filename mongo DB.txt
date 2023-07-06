@@ -1,0 +1,151 @@
+MongoDB shell version v5.0.16
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("95340e12-580b-4857-9256-ae74f2a82d7c") }
+MongoDB server version: 5.0.16
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2023-05-12T00:14:35.635+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin   0.000GB
+config  0.000GB
+gobi    0.000GB
+local   0.000GB
+> use youtube
+switched to db youtube
+> db.createcollection("gobi")
+uncaught exception: TypeError: db.createcollection is not a function :
+@(shell):1:1
+> show dbs
+admin   0.000GB
+config  0.000GB
+gobi    0.000GB
+local   0.000GB
+>
+>
+>
+>
+>
+> db.createcollection('gobi')
+uncaught exception: TypeError: db.createcollection is not a function :
+@(shell):1:1
+> db.createCollection('gobi')
+{ "ok" : 1 }
+> show dbs
+admin    0.000GB
+config   0.000GB
+gobi     0.000GB
+local    0.000GB
+youtube  0.000GB
+>
+>
+>
+> db.gobi.insertOne({'name':'gobi','age':27,'email':'gobi@gmail.com'})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("6475c1fa82a63a8675c83fc1")
+}
+>
+>
+> db.gobi.find()
+{ "_id" : ObjectId("6475c1fa82a63a8675c83fc1"), "name" : "gobi", "age" : 27, "email" : "gobi@gmail.com" }
+>
+>
+>
+>
+> db.gobi.find()
+{ "_id" : ObjectId("6475c1fa82a63a8675c83fc1"), "name" : "gobi", "age" : 27, "email" : "gobi@gmail.com" }
+{ "_id" : ObjectId("6475c639ab723d67e20891c3"), "Channel Name" : "Manish Sharma", "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions", "Subscriber Count" : "99400", "View Count" : "19612446", "Video Count" : "336", "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg" }
+{ "_id" : ObjectId("6475c6f2ab723d67e20891c5"), "Channel Name" : "Manish Sharma", "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions", "Subscriber Count" : "99400", "View Count" : "19612446", "Video Count" : "336", "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg" }
+{ "_id" : ObjectId("6475c717ab723d67e20891c7"), "Channel Name" : "Manish Sharma", "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions", "Subscriber Count" : "99400", "View Count" : "19612446", "Video Count" : "336", "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg" }
+{ "_id" : ObjectId("6475c738ab723d67e20891c9"), "Channel Name" : "Manish Sharma", "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions", "Subscriber Count" : "99400", "View Count" : "19612446", "Video Count" : "336", "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg" }
+{ "_id" : ObjectId("6475c74fab723d67e20891cb"), "Channel Name" : "Logic First Tamil", "Channel Description" : "All courses are completely free now and forever.", "Subscriber Count" : "121000", "View Count" : "7825680", "Video Count" : "363", "Playlist ID" : "UUXhbCCZAG4GlaBLm80ZL-iA" }
+{ "_id" : ObjectId("6475c76fab723d67e20891cd"), "Channel Name" : "Logic First Tamil", "Channel Description" : "All courses are completely free now and forever.", "Subscriber Count" : "121000", "View Count" : "7825680", "Video Count" : "363", "Playlist ID" : "UUXhbCCZAG4GlaBLm80ZL-iA" }
+>
+>
+>
+>
+> db.createCollection('channeldata')
+{ "ok" : 1 }
+>
+>
+> db.gobi.find().pretty()
+{
+        "_id" : ObjectId("6475c1fa82a63a8675c83fc1"),
+        "name" : "gobi",
+        "age" : 27,
+        "email" : "gobi@gmail.com"
+}
+{
+        "_id" : ObjectId("6475c639ab723d67e20891c3"),
+        "Channel Name" : "Manish Sharma",
+        "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions",
+        "Subscriber Count" : "99400",
+        "View Count" : "19612446",
+        "Video Count" : "336",
+        "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg"
+}
+{
+        "_id" : ObjectId("6475c6f2ab723d67e20891c5"),
+        "Channel Name" : "Manish Sharma",
+        "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions",
+        "Subscriber Count" : "99400",
+        "View Count" : "19612446",
+        "Video Count" : "336",
+        "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg"
+}
+{
+        "_id" : ObjectId("6475c717ab723d67e20891c7"),
+        "Channel Name" : "Manish Sharma",
+        "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions",
+        "Subscriber Count" : "99400",
+        "View Count" : "19612446",
+        "Video Count" : "336",
+        "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg"
+}
+{
+        "_id" : ObjectId("6475c738ab723d67e20891c9"),
+        "Channel Name" : "Manish Sharma",
+        "Channel Description" : "Manish Sharma is a recipient of the Oracle ACE Award. He is the founder of RebellionRider.com, a popular blog on Computer Programming languages.\nThis channel aims to provide easy to understand tutorial videos on SQL, SQL Developer, PL/SQL, Oracle Database & Python. You can also find here videos on Oracle Database 10g, 11g, 12c & 18c versions.\nThe tutorials have been designed to help you in preparing for Oracle DBA & Developer certifications like – SQL Expert, OCA and OCP. They are only a small part of the complete training. For the full paid training you can contact us. You can also learn Python programming to boost your IT career or bag that coveted job.\nFor YouTube sponsorship, website advertising or any other corporate queries feel free to contact us. All the contact info are on the website.\nwww.RebellionRider.com\nIf you want Manish to speak at a seminar, conduct workshop/training at your institute or any business related queries please leave an email.\nHe regularly answers questions",
+        "Subscriber Count" : "99400",
+        "View Count" : "19612446",
+        "Video Count" : "336",
+        "Playlist ID" : "UUQYO2p7JMcCp-9xIZxGP2Sg"
+}
+{
+        "_id" : ObjectId("6475c74fab723d67e20891cb"),
+        "Channel Name" : "Logic First Tamil",
+        "Channel Description" : "All courses are completely free now and forever.",
+        "Subscriber Count" : "121000",
+        "View Count" : "7825680",
+        "Video Count" : "363",
+        "Playlist ID" : "UUXhbCCZAG4GlaBLm80ZL-iA"
+}
+{
+        "_id" : ObjectId("6475c76fab723d67e20891cd"),
+        "Channel Name" : "Logic First Tamil",
+        "Channel Description" : "All courses are completely free now and forever.",
+        "Subscriber Count" : "121000",
+        "View Count" : "7825680",
+        "Video Count" : "363",
+        "Playlist ID" : "UUXhbCCZAG4GlaBLm80ZL-iA"
+}
+> show dbs
